@@ -1,0 +1,45 @@
+gather_initial_reactions:
+  description: >
+    Lead the initial discussion about the product concept:
+    {product_concept}
+    
+    Ask each participant for their first impressions and immediate reactions.
+    Ensure each participant shares their perspective.
+  agent: moderator
+  expected_output: >
+    A summary of initial reactions from all participants, including their first
+    impressions and immediate thoughts about the smart water bottle concept.
+
+explore_features:
+  description: >
+    Deep dive into specific product features:
+    {product_concept}
+    
+    Guide participants to discuss:
+    1. Most/least appealing features
+    2. Price point considerations
+    3. Potential concerns or barriers to purchase
+    
+    Ensure balanced participation from all members.
+  agent: moderator
+  expected_output: >
+    A detailed analysis of participant feedback on specific features, pricing,
+    and potential barriers to purchase, with input from all demographic perspectives.
+
+compile_report:
+  description: >
+    Create a comprehensive focus group report including:
+    1. Summary of key findings
+    2. Main points of consensus and disagreement
+    3. Specific feedback from different demographic perspectives
+    4. Recommendations for product improvement
+    5. Purchase intent indicators
+    
+    Use the discussion from previous tasks as context.
+  agent: recorder
+  expected_output: >
+    A comprehensive focus group report that synthesizes all participant feedback,
+    highlights key findings, and provides actionable recommendations for the product.
+  context:
+    - gather_initial_reactions
+    - explore_features 
