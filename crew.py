@@ -44,6 +44,26 @@ class FocusGroupCrew:
         return Agent(config=self.agents_config['active_senior'])
     
     @agent
+    def eco_friendly_consumer(self) -> Agent:
+        return Agent(config=self.agents_config['eco_friendly_consumer'])
+
+    @agent
+    def health_and_fitness_enthusiast(self) -> Agent:
+        return Agent(config=self.agents_config['health_and_fitness_enthusiast'])
+
+    @agent
+    def busy_professional(self) -> Agent:
+        return Agent(config=self.agents_config['busy_professional'])
+
+    @agent
+    def tech_innovator(self) -> Agent:
+        return Agent(config=self.agents_config['tech_innovator'])
+
+    @agent
+    def creative_influencer(self) -> Agent:
+        return Agent(config=self.agents_config['creative_influencer'])
+
+    @agent
     def moderator(self) -> Agent:
         return Agent(config=self.agents_config['moderator'])
     
